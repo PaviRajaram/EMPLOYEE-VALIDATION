@@ -1,3 +1,4 @@
+ var Employees=[];
 deletefn=()=>{
     document.getElementById("Ename").value="";
     document.getElementById("id").value="";
@@ -13,22 +14,11 @@ deletefn=()=>{
         id:Eid,
         pswd:date.getTime()
     };
- var Employees=[];
  var employee=JSON.stringify(Employee);
- 
- 
  console.log(Employees);
  Employees.push(employee);
  localStorage.Employee+=Employees;
-//Employees.push(Employee);
- //localStorage.setItem("Employee",JSON.stringify(Employees));
- //Employees.push(JSON.parse(localStorage.getItem('Employees')));
-
- //window.localStorage.setItem('Employee',employee);
+ localStorage.setItem("Employee",Employees);
  //localStorage.Employees+=JSON.stringify(Employee);
- //localStorage.setItem('Employee1',Employees+=employee);
- //alert(localStorage.getItem('employee'));
- //window.location.href="file:///C:/Users/pavii/javascript/login.html"
-
  alert(employee);
  }
