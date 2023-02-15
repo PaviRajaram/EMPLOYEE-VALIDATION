@@ -17,21 +17,28 @@ clearfn=()=>{
  document.getElementById("psw").value="";
 
 }
-/*function EmployeeValidate(){
+function EmployeeValidate(){
     var uname=document.getElementById("username").value;
-    var pswd=document.getElementById("psw").value;
+    var psw=document.getElementById("psw").value;
       verify={
         id:uname,
-        pswd:pswd
+        pswd:psw
       }
-      console.log(verify);
-      //var keys=JSON.parse(window.localStorage.getItem('Employee'));
-      var keys=window.localStorage.getItem('Employee');
+      keyVal=JSON.stringify(verifyPsw);
+      keys.push(keyVal);
       console.log(keys);
-      //if(JSON.stringify(keys)===JSON.stringify(verify)){
-        if(verify===keys){
-        alert("sucess");
-      }else {
-        alert("fail");
-      }
-}*/
+      var idP=localStorage.getItem('Employee');
+      idPswd.push(idP);
+      console.log(idPswd);
+      console.log(verify);
+      for (let i=0;i<idPswd.length;i++)
+       {
+        if(idPswd[i]===keys[i]){
+          alert("sucess")  
+          window.open("file:///C:/Users/pavii/javascript/welcome.html");
+        }
+          else alert("fail")
+       }
+
+    }
+}
