@@ -7,15 +7,11 @@ deletefn=()=>{
     document.getElementById("dob").value="";   
  }
 submitfn=()=>{
-    const date=new Date();
-    
- //localStorage.Employee+=Employees;
- //localStorage.setItem("Employee",JSON.stringify(Employees));
-
     let name=document.getElementById("Ename").value;
     let desgn=document.getElementById("dsgn").value;
     let  Eid=document.getElementById("id").value;
-    let salary= document.getElementById("salary").value;
+    let salary= document.getElementById("salary").value; 
+    //const date=new Date();
     var numbers = /^[0-9]+$/;
     var letters = /^[A-Za-z]+$/;
     if(salary.match(numbers)&&name.match(letters)&&desgn.match(letters)&&Eid.match(numbers)){
@@ -28,6 +24,8 @@ submitfn=()=>{
         console.log(employee);
         Employees.push(employee);
         localStorage.setItem("Employee",Employees);
+     //localStorage.Employee+=Employees;
+     //localStorage.setItem("Employee",JSON.stringify(Employees));
         alert(employee);
        }
        else{
