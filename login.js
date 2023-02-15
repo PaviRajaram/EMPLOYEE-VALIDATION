@@ -1,3 +1,5 @@
+var keys=[];
+var idPswd=[];
 function validate(){
   var uname=document.getElementById("username").value;
   var pswd=document.getElementById("psw").value;
